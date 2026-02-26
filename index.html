@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresnel | Data Scientist & Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            font-weight: bold;
+            margin: 0 auto 20px;
+            border: 4px solid rgba(255,255,255,0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            margin-bottom: 30px;
+        }
+
+        .bio {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            color: #c0c0c0;
+            line-height: 1.8;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .link-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 25px 35px;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            min-width: 200px;
+        }
+
+        .link-card:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-5px);
+            border-color: rgba(102, 126, 234, 0.5);
+        }
+
+        .link-card svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .link-info {
+            text-align: left;
+        }
+
+        .link-info .platform {
+            font-size: 0.85rem;
+            color: #a0a0a0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .link-info .username {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .section {
+            margin-top: 60px;
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            color: #667eea;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            background: rgba(102, 126, 234, 0.2);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #a0b0ff;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #606060;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .link-card {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <div class="avatar">F</div>
+            <h1>Fresnel</h1>
+            <p class="title">Data Scientist & Developer</p>
+            <p class="bio">
+                Passionate about data science, machine learning, and building impactful solutions.
+                Explore my work on Kaggle and GitHub.
+            </p>
+        </div>
+
+        <div class="links">
+            <a href="https://www.kaggle.com/fresnellll" class="link-card" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.9375 12.1047L16.2917 17.0625H14.6042L18.6875 12.1047L14.8125 7.14688H16.5L20.9375 12.1047ZM13.8542 17.0625H11.8958L8.6875 12.6459V17.0625H7.3125V7.14688H8.6875V11.7708L11.7708 7.14688H13.7292L10.3542 12.2292L13.8542 17.0625ZM5.1875 17.0625H3.8125V7.14688H5.1875V17.0625Z"/>
+                </svg>
+                <div class="link-info">
+                    <div class="platform">Kaggle</div>
+                    <div class="username">fresnellll</div>
+                </div>
+            </a>
+
+            <a href="https://github.com/fresnellll" class="link-card" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <div class="link-info">
+                    <div class="platform">GitHub</div>
+                    <div class="username">fresnellll</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="section">
+            <h2>Skills & Technologies</h2>
+            <div class="skills">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">Data Analysis</span>
+                <span class="skill-tag">Deep Learning</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Visualization</span>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Fresnel. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
