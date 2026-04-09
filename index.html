@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fresnel | Data Scientist & Developer</title>
+    <title>Fresnel | Academic Homepage</title>
     <style>
         * {
             margin: 0;
@@ -13,9 +13,9 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background: #f6f8fc;
             min-height: 100vh;
-            color: #fff;
+            color: #1f2937;
             overflow-x: hidden;
         }
 
@@ -23,6 +23,11 @@
             max-width: 900px;
             margin: 0 auto;
             padding: 60px 20px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
 
         .profile {
@@ -31,40 +36,37 @@
         }
 
         .avatar {
-            width: 150px;
-            height: 150px;
+            width: 170px;
+            height: 170px;
             border-radius: 50%;
             object-fit: cover;
             margin: 0 auto 20px;
-            border: 4px solid rgba(102, 126, 234, 0.5);
-            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+            border: 4px solid #e5e7eb;
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .avatar:hover {
             transform: scale(1.05);
-            box-shadow: 0 15px 50px rgba(102, 126, 234, 0.5);
+            box-shadow: 0 12px 32px rgba(59, 130, 246, 0.25);
         }
 
         h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #0f172a;
         }
 
         .title {
             font-size: 1.2rem;
-            color: #a0a0a0;
+            color: #4b5563;
             margin-bottom: 30px;
         }
 
         .bio {
             max-width: 600px;
             margin: 0 auto 40px;
-            color: #c0c0c0;
+            color: #334155;
             line-height: 1.8;
         }
 
@@ -76,12 +78,12 @@
         }
 
         .link-card {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
             border-radius: 12px;
             padding: 25px 35px;
             text-decoration: none;
-            color: #fff;
+            color: #0f172a;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
@@ -93,9 +95,10 @@
         }
 
         .link-card:hover {
-            background: rgba(255,255,255,0.1);
+            background: #f8fafc;
             transform: translateY(-5px);
-            border-color: rgba(102, 126, 234, 0.5);
+            border-color: #93c5fd;
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.12);
         }
 
         .link-card svg {
@@ -113,7 +116,7 @@
 
         .link-info .platform {
             font-size: 0.85rem;
-            color: #a0a0a0;
+            color: #64748b;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -127,7 +130,7 @@
         .ripple {
             position: absolute;
             border-radius: 50%;
-            background: rgba(102, 126, 234, 0.6);
+            background: rgba(59, 130, 246, 0.4);
             transform: scale(0);
             animation: ripple-animation 0.6s linear;
             pointer-events: none;
@@ -147,7 +150,7 @@
         .section h2 {
             font-size: 1.5rem;
             margin-bottom: 25px;
-            color: #667eea;
+            color: #1e3a8a;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -157,7 +160,7 @@
             content: '';
             width: 4px;
             height: 28px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
             border-radius: 2px;
         }
 
@@ -169,12 +172,12 @@
         }
 
         .skill-tag {
-            background: rgba(102, 126, 234, 0.2);
-            border: 1px solid rgba(102, 126, 234, 0.3);
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 0.9rem;
-            color: #a0b0ff;
+            color: #1d4ed8;
             transition: all 0.3s ease;
             cursor: pointer;
             position: relative;
@@ -182,7 +185,7 @@
         }
 
         .skill-tag:hover {
-            background: rgba(102, 126, 234, 0.4);
+            background: #dbeafe;
             transform: translateY(-2px);
         }
 
@@ -195,8 +198,8 @@
         }
 
         .project-card {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
             border-radius: 16px;
             padding: 25px;
             transition: all 0.3s ease;
@@ -206,10 +209,10 @@
         }
 
         .project-card:hover {
-            background: rgba(255,255,255,0.08);
+            background: #f8fafc;
             transform: translateY(-5px);
-            border-color: rgba(102, 126, 234, 0.5);
-            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.2);
+            border-color: #93c5fd;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.12);
         }
 
         .project-header {
@@ -242,11 +245,11 @@
         .project-title {
             font-size: 1.1rem;
             font-weight: 600;
-            color: #fff;
+            color: #0f172a;
         }
 
         .project-description {
-            color: #a0a0a0;
+            color: #475569;
             line-height: 1.7;
             margin-bottom: 15px;
             font-size: 0.95rem;
@@ -256,7 +259,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: #667eea;
+            color: #2563eb;
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
@@ -264,7 +267,27 @@
         }
 
         .project-link:hover {
-            color: #764ba2;
+            color: #1d4ed8;
+        }
+
+        .contact {
+            display: grid;
+            gap: 14px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 14px 16px;
+            color: #0f172a;
+            font-size: 0.95rem;
+        }
+
+        .contact-item strong {
+            color: #1e40af;
+            margin-right: 8px;
         }
 
         .project-link svg {
@@ -299,8 +322,8 @@
             text-align: center;
             margin-top: 80px;
             padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #606060;
+            border-top: 1px solid #e5e7eb;
+            color: #64748b;
         }
 
         @media (max-width: 600px) {
@@ -325,7 +348,7 @@
 <body>
     <div class="container">
         <div class="profile">
-            <img src="avatar.jpg" alt="Fresnel" class="avatar">
+            <img src="%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260409163333_25_85.jpg" alt="Fresnel" class="avatar">
             <h1>Fresnel</h1>
             <p class="title">Data Scientist & Machine Learning Engineer</p>
             <p class="bio">
@@ -354,6 +377,14 @@
                     <div class="username">fresnellll</div>
                 </div>
             </a>
+        </div>
+
+        <div class="section">
+            <h2>Contact</h2>
+            <div class="contact">
+                <div class="contact-item"><strong>Email:</strong> u202414779@hust.edu.cn</div>
+                <div class="contact-item"><strong>Phone:</strong> +86 15082395833</div>
+            </div>
         </div>
 
         <div class="section">
